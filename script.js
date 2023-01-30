@@ -40,6 +40,7 @@ userRandomColor.addEventListener('click',() => {colorValue='randomColor';});
 
 //clear the grid from any color and refresh the page with default value
 clearButton.addEventListener('click',() => {
+    numberGrid = 20;
     colorValue = 'blackColor';
     mainContainer.replaceChildren(); 
     //call function to recreate the grid from scratch
