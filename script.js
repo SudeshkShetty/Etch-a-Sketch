@@ -7,23 +7,30 @@ const userInputAny = document.querySelector('.userInputAny');
 const clearButton = document.querySelector('.clearButton');
 const blackColor = document.querySelector('.blackColor');
 const anyColor = document.querySelector('.anyColor');
-//crate a input element to receive the color value from user
+
+//create a input element to receive the color value from user
 const inputColor = document.createElement('input');
+
 //initilize the grid size i.e horizontal grid '20' and vertical grid '20' elements
 let numberGrid = 20;
+
 //intialize black color as the default user choice 
 //use the variable to get the user choice for different button choice
 let colorValue = 'blackColor';
+
 //use black as the default color when the user presses the input color box 
 //but does not select any color
 let userChoiceColorValue = '#000000';
+
 /*add eventlistener to prevent the mouse from dragging the div element in the grid
 e.preventDefault function prevents the drag event from continuing further.
 Problem caused if the below line is omitted is when the mouse drag starts 
 the background color change of grid element stops*/
 document.body.addEventListener('dragstart',(e) => {e.preventDefault();});
+
 //say user clicked BlackColor button then the var colorvalue is changed to blackcolor
 blackColor.addEventListener('click',() => {colorValue='blackColor';});
+
 //say user clicked UserChoice button and did not select any particular color then default color is black
 //getColorchoice updates the userColorChoice variable if the user select the color from the color box
 userInputAny.addEventListener('click',() => {getColorChoice();colorValue='userInputColor';});
